@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/itemListFragment">
+
+    <fragment
+        android:id="@+id/itemListFragment"
+        android:name="com.example.indiviv6.ui.fragments.ItemListFragment"
+        android:label="Item List">
+        <action
+            android:id="@+id/action_to_itemDetailFragment"
+            app:destination="@id/itemDetailFragment" />
+        <action
+            android:id="@+id/action_to_favoriteFragment"
+            app:destination="@id/favoriteFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/itemDetailFragment"
+        android:name="com.example.indiviv6.ui.fragments.ItemDetailFragment"
+        android:label="Item Detail" />
+
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.example.indiviv6.ui.fragments.FavoriteFragment"
+        android:label="Favorites" />
+</navigation>

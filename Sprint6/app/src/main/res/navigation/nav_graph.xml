@@ -1,0 +1,27 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/phoneListFragment">
+
+    <!-- Fragmento de lista de teléfonos -->
+    <fragment
+        android:id="@+id/phoneListFragment"
+        android:name="com.example.sprintmodulo6.ui.PhoneListFragment"
+        android:label="Phone List">
+        <!-- Acción para navegar al fragmento de detalles -->
+        <action
+            android:id="@+id/action_phoneListFragment_to_phoneDetailFragment"
+            app:destination="@id/phoneDetailFragment" />
+    </fragment>
+
+    <!-- Fragmento de detalles del teléfono -->
+    <fragment
+        android:id="@+id/phoneDetailFragment"
+        android:name="com.example.sprintmodulo6.ui.PhoneDetailFragment"
+        android:label="Phone Detail">
+        <argument
+            android:name="phoneId"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/tareaFragment">
+
+    <fragment
+        android:id="@+id/tareaFragment"
+        android:name="com.example.individual1m6.TareaFragment"
+        android:label="Lista de Tareas" >
+        <action
+            android:id="@+id/action_tareaFragment_to_editarTareaFragment"
+            app:destination="@id/editarTareaFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/editarTareaFragment"
+        android:name="com.example.individual1m6.EditarTareaFragment"
+        android:label="Editar Tarea" >
+
+        <argument
+            android:name="tareaId"
+            app:argType="integer" />
+    </fragment>
+</navigation>
